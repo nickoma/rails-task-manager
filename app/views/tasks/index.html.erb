@@ -1,0 +1,9 @@
+<h1>My Tasks</h1>
+<% @tasks.each do |task| %>
+
+<ul>
+<%= link_to task.title, task_path(task.id) %>
+<%=check_box_tag(‘task.id’, value = ‘1’, checked = true,
+options = {:class=>‘task.id’})%>
+</ul>
+<% end %>
